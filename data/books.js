@@ -203,4 +203,19 @@ const books = [
     }
 ]
 
-module.exports = { books };
+const groupByType = (books) => {
+    const category = {};
+    books.forEach( book => {
+        const type = book.type;
+        const currentCategory = category[type];
+        if (!category[type]) {
+            category[type] = [book];
+        } else {
+            currentCategory.push(book);
+            category[type] = currentCategory;
+        }
+    })
+    return category;
+}
+
+module.exports = { books, groupByType };

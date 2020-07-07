@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+<div class='book-btns'>
+    <% types.forEach( type => { %> 
+        <button><a href="/books/<%= type %> "><%= type %> </a></button>
+    <% }); %> 
+</div>
+<ul class='books'>
+    <% data.forEach( book => { %> 
+        <%- include('../partials/book', {book: book}) %> 
+    <% }) ; %> 
+</ul>
+<%- include('../partials/footer') %> 

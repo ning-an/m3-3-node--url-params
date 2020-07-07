@@ -1,0 +1,31 @@
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.books li {
+    margin: 15px;
+}
+
+.img {
+    width: 300px;
+    height: 400px;
+}
+
+.book-btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.book-btns button {
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 1px lightgrey;
+    width: 130px;
+    height: 50px;
+}

@@ -1,0 +1,22 @@
+.bookpage-div {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px lightgrey;
+    padding: 10px;
+}
+
+.bookpage-div p {
+    margin: 10px 5px;
+}
+.bookpage-title {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.bookpage-author {
+    font-style: italic;
+}
