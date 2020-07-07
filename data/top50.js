@@ -350,4 +350,30 @@ const top50 = [
     },
 ];
 
-module.exports = { top50 };
+const electMostPopularArtist = (songs) => {
+    const artists = {};
+    let popularSongNum = 0;
+    let popularArtist;
+    songs.forEach( song => {
+        let artist = song.artist;
+        let currentSongs = artists[artist];
+        console.log(currentSongs);
+        //rearrange songs based on artists
+        if (!artists[artist]) {
+            artists[artist] = [song];
+        } else {
+            console.log(currentSongs);
+            currentSongs.push(song);
+            artists[artist] = currentSongs;
+            console.log(artists[artist]);
+        }
+        //update 'popular' variable
+        if (artists[artist].length > popularSongNum) {
+            popularSongNum = artists[artist].length;
+            popularArtist = artist;
+        }
+    })
+    return artists[popularArtist]
+}
+
+module.exports = { top50, electMostPopularArtist };
